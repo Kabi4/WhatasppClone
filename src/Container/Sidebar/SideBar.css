@@ -1,0 +1,9 @@
+.sidebar{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    border: 4px #ccc solid;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}

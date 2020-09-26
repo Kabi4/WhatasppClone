@@ -1,0 +1,48 @@
+.title{
+    text-align: left;
+}
+
+.data{
+    display: flex;
+    justify-items: start;
+}
+
+.data i{
+    padding: 10px;
+    justify-self: flex-start;
+    flex: 1 1 1;
+    font-size: 16px;
+    z-index: 200;
+    color: darkgreen;
+}
+
+.data i:hover{
+    color: lightgreen;
+}
+
+
+.data p{
+    padding: 0.5rem 1rem;
+    justify-self: flex-start;
+    flex: 1 0 0;
+    font-size: 16px;
+    border-bottom: 2px solid grey;
+}
+
+.data input{
+    font-family: inherit;
+    color: black;
+    padding: 0.5rem 1rem;
+    justify-self: flex-start;
+    flex: 1 0 0;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    z-index: 200;
+    border-bottom: 2px solid lightgreen;
+}
+
+.data input:-ms-input-placeholder{
+    font-family: inherit;
+    color: black;
+}

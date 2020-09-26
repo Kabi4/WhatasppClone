@@ -9,11 +9,13 @@ import {BrowserRouter} from 'react-router-dom';
 import {Provider} from 'react-redux';
 
 import peoples from './Store/Reducer/peoplsReducer';
+import UserProfileReducer from './Store/Reducer/UserProfileReducer';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
-    peoples: peoples
+    peoples: peoples,
+    userProfile: UserProfileReducer
 });
 
 const store = createStore(rootReducer,composeEnhancers(applyMiddleware(thunk)));

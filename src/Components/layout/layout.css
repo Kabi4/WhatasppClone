@@ -3,7 +3,8 @@
     width: 100vw;
     height: 100vh;
     grid-template-rows: 1fr 5fr;
-    grid-template-columns: 2fr 6fr;
+    grid-template-columns: minmax(200px,400px) 1fr;
+    grid-gap: 2px;
 }
 
 .main{
