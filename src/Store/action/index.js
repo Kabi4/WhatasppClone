@@ -4,3 +4,8 @@ export {
     cancelInputChange,
     aboutChngeHandler
 } from './UserProfile';
+
+export {
+    changeSearchInput,
+    searchHandler
+} from './searchBar';

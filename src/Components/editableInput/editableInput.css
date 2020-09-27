@@ -40,6 +40,7 @@
     border: none;
     z-index: 200;
     border-bottom: 2px solid lightgreen;
+    caret-color: lightgreen;
 }
 
 .data input:-ms-input-placeholder{

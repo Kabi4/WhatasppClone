@@ -8,14 +8,17 @@ import thunk from 'redux-thunk';
 import {BrowserRouter} from 'react-router-dom';
 import {Provider} from 'react-redux';
 
-import peoples from './Store/Reducer/peoplsReducer';
+
 import UserProfileReducer from './Store/Reducer/UserProfileReducer';
+import searchBarReducer from './Store/Reducer/searchBar';
+import allChatReducer from './Store/Reducer/AllChat';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
-    peoples: peoples,
-    userProfile: UserProfileReducer
+    allChat: allChatReducer,
+    userProfile: UserProfileReducer,
+    search: searchBarReducer
 });
 
 const store = createStore(rootReducer,composeEnhancers(applyMiddleware(thunk)));
