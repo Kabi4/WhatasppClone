@@ -1,0 +1,26 @@
+.sidesearch{
+    background-color: aqua;
+    z-index: 200;
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    transform: translateX(250%);
+    transition: all 1s linear;
+}
+
+.active{
+    background-color: aqua;
+    z-index: 200;
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    transform: translateX(200%);
+    transition: all 1s linear;
+    transform: translateX(150%);
+}
