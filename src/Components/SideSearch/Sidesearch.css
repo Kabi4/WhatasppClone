@@ -1,26 +1,25 @@
 .sidesearch{
-    background-color: aqua;
     z-index: 200;
     position: absolute;
     display: block;
     top: 0;
     right: 0;
-    width: 40%;
+    width: 25%;
     height: 100%;
-    transform: translateX(250%);
-    transition: all 1s linear;
+    transform: translateX(110%);
+    transition: all 0.1s linear;
+    padding: 1rem;
 }
 
 .active{
-    background-color: aqua;
     z-index: 200;
     position: absolute;
     display: block;
     top: 0;
     right: 0;
-    width: 40%;
+    width: 25%;
     height: 100%;
-    transform: translateX(200%);
-    transition: all 1s linear;
-    transform: translateX(150%);
+    transition: all 0.1s linear;
+    transform: translateX(0%);
+    padding: 1rem;
 }

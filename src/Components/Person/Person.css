@@ -3,6 +3,11 @@
     background-color: white;
     padding: 4px 8px;
     cursor: pointer;
+    border-radius: 4px;
+}
+
+.active{
+    background-color: #ccc;
 }
 
 .person img{

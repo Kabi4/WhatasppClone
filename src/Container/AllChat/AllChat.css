@@ -7,7 +7,6 @@
     overflow-y: scroll;
     background-color: rgb(248, 242, 242);
     border-radius: 8px;
-    padding: 8px;
     display: flex;
     flex-direction: column;
 }

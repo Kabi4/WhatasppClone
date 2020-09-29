@@ -1,25 +1,81 @@
 .sideinfo{
-    background-color: aqua;
+    background-color: whitesmoke;
     z-index: 200;
     position: absolute;
     display: block;
     top: 0;
     right: 0;
-    width: 40%;
+    width: 35%;
     height: 100%;
-    transform: translateX(250%);
-    transition: all 1s linear;
+    transform: translateX(150%);
+    transition: all 0.1s linear;
+    text-align: center;
 }
 
 .active{
-    background-color: aqua;
+    background-color: whitesmoke;
     z-index: 200;
     position: absolute;
     display: block;
     top: 0;
     right: 0;
-    width: 40%;
+    width: 35%;
     height: 100%;
-    transition: all 1s linear;
-    transform: translateX(150%);
+    transition: all 0.1s linear;
+    transform: translateX(0%);
+    text-align: center;
+}
+
+.profileandname{
+    margin: 1rem 0px;
+    padding: 1rem 10px;
+    color: greenyellow;
+    border: 1px solid #ccc;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+.image{
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+    display: block;
+    padding: 10px 10%;
+}
+
+.aboutandnumber{
+    margin: 1rem 0px;
+    padding: 1rem 10px;
+    color: greenyellow;
+    width: 100%;
+    display: block;
+    padding: 10px 4px;
+    border: 1px solid #ccc;
+}
+
+.name{
+    display: block;
+    padding: 10px 10px;
+    padding-bottom: 2px;
+    font-size: 30px;
+    color: black;
+    border-bottom: 3px solid lightgreen;
+}
+
+.about{
+    display: block;
+    padding: 10px 10px;
+    padding-bottom: 2px;
+    font-size: 30px;
+    color: black;
+    border-bottom: 3px solid lightgreen;
+}
+
+.number{
+    display: block;
+    padding: 10px 10px;
+    padding-bottom: 2px;
+    font-size: 30px;
+    color: black;
 }

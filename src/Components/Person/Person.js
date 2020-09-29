@@ -5,8 +5,10 @@ import classes from './Person.css';
 import profile from './../../Assets/Person.jpg';
 
 const Person = (props) => {
+    let classPerson = [classes.person];
+    if(props.active)classPerson.push(classes.active);
     return(
-        <div className={classes.person}>
+        <div className={classPerson.join(" ")}>
             <img src={profile} alt="chatImage" />
             <div className={classes.data}>
                 <h2 className={classes.name}>{props.name}</h2>

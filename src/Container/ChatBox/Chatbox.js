@@ -33,7 +33,7 @@ class Chatbox extends Component{
                 <ContactDetail clickpic={this.tooglesideInfo} clicksearch={this.tooglesideSearch} name="Nobita" lastseen="9:10 am"/>
                 <Chat time="05:02 pm" />
                 <Backdrop show={this.state.sideinfo||this.state.sidesearch} toogleEditing={this.setFalse}/>
-                <Sideinfo  selected={this.state.sideinfo}/>
+                <Sideinfo name="Nobita" about="DeadMan" number="+91 81267 05777"  selected={this.state.sideinfo}/>
                 <Sidesearch  selected={this.state.sidesearch} />
             </div>
         );
