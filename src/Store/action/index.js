@@ -9,3 +9,7 @@ export {
     changeSearchInput,
     searchHandler
 } from './searchBar';
+
+export {
+    changeChatBox
+} from './chatbox';

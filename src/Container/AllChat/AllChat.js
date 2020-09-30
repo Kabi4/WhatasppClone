@@ -9,16 +9,16 @@ class Allchat extends Component{
     render(){
         return(
             <div className={classes.allChats}>
-                <Person active={true} name="Kriti Sharma" lastmsg="kaisa h?" lastTime="9:10 PM"/>
-                <Person name="Pandu" lastmsg="Bhai maine gand mrali!" lastTime="7:10 AM"/>
-                <Person name="Unkown" lastmsg="Hey there?" lastTime="00:10 PM"/>
-                <Person name="Howdy" lastmsg="where are you?" lastTime="2:10 AM"/>
-                <Person name="+91-8293104132" lastmsg="Ok" lastTime="5:10 AM"/>
-                <Person name="Sis" lastmsg="?" lastTime="6:10 PM"/>
-                <Person name="+91-8949527177" lastmsg="" lastTime="7:10 AM"/>
-                <Person name="AlTC" lastmsg="Received" lastTime="2:10 PM"/>
-                <Person name="Shubham" lastmsg="Hey there!" lastTime="5:10 AM"/>
-                <Person name="OYO" lastmsg="Are you there?" lastTime="8:10 PM"/>
+                <Person chat={[]} lastseen="9:10 PM" about="NONE" number="9999999999"  name="Kriti Sharma" lastmsg="kaisa h?" lastTime="9:10 PM"/>
+                <Person chat={[]} lastseen="7:10 AM" about="NONE" number="9999999999" name="Pandu" lastmsg="Bhai RCB on form!" lastTime="7:10 AM"/>
+                <Person chat={[]} lastseen="00:10 PM" about="NONE" number="9999999999" name="Unkown" lastmsg="Hey there?" lastTime="00:10 PM"/>
+                <Person chat={[]} lastseen="2:10 AM" about="NONE" number="9999999999" name="Howdy" lastmsg="where are you?" lastTime="2:10 AM"/>
+                <Person chat={[]} lastseen="5:10 AM" about="NONE" number="9999999999" name="+91-8293104132" lastmsg="Ok" lastTime="5:10 AM"/>
+                <Person chat={[]} lastseen="6:10 PM" about="NONE" number="9999999999" name="Sis" lastmsg="?" lastTime="6:10 PM"/> 
+                <Person chat={[]} lastseen="7:10 AM" about="NONE" number="9999999999" name="+91-8949527177" lastmsg="" lastTime="7:10 AM"/>
+                <Person chat={[]} lastseen="2:10 PM" about="NONE" number="9999999999" name="AlTC" lastmsg="Received" lastTime="2:10 PM"/>
+                <Person chat={[]} lastseen="5:10 AM" about="NONE" number="9999999999" name="Shubham" lastmsg="Hey there!" lastTime="5:10 AM"/>
+                <Person chat={[]} lastseen="8:10 PM" about="NONE" number="9999999999" name="OYO" lastmsg="Are you there?" lastTime="8:10 PM"/>
             </div>
         );
     };

@@ -6,6 +6,8 @@ import Sidesearch from '../../Components/SideSearch/Sidesearch';
 import Backdrop from './../../Components/Backdrop/Backdrop';
 import classes from './Chatbox.css';
 
+import {connect} from 'react-redux';
+
 class Chatbox extends Component{
     state = {
         sideinfo: false,
@@ -28,16 +30,30 @@ class Chatbox extends Component{
     }
 
     render(){
+        let chattingarea = <div key="chattingarea" className={classes.chatbox}></div>;
+        if(this.props.name!==""){
+            chattingarea = <div key="chattingarea" className={classes.chatbox}>
+            <ContactDetail clickpic={this.tooglesideInfo} clicksearch={this.tooglesideSearch} name={this.props.name} lastseen={this.props.lastseen}/>
+            <Chat chats={this.props.chats} />
+            <Backdrop show={this.state.sideinfo||this.state.sidesearch} toogleEditing={this.setFalse}/>
+            <Sideinfo name={this.props.name} about={this.props.about} number={this.props.number}  selected={this.state.sideinfo}/>
+            <Sidesearch  selected={this.state.sidesearch} />
+        </div>
+        }
         return(
-            <div className={classes.chatbox}>
-                <ContactDetail clickpic={this.tooglesideInfo} clicksearch={this.tooglesideSearch} name="Nobita" lastseen="9:10 am"/>
-                <Chat time="05:02 pm" />
-                <Backdrop show={this.state.sideinfo||this.state.sidesearch} toogleEditing={this.setFalse}/>
-                <Sideinfo name="Nobita" about="DeadMan" number="+91 81267 05777"  selected={this.state.sideinfo}/>
-                <Sidesearch  selected={this.state.sidesearch} />
-            </div>
+            [chattingarea]
         );
     };
 };
 
-export default Chatbox;
+const mapStateToProps = (state)=>{
+    return{
+        name: state.chatbox.name,
+        number: state.chatbox.number,
+        lastseen: state.chatbox.lastseen,
+        about: state.chatbox.about,
+        chats: state.chatbox.chat
+    }
+}
+
+export default connect(mapStateToProps)(Chatbox);

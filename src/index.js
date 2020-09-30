@@ -12,13 +12,15 @@ import {Provider} from 'react-redux';
 import UserProfileReducer from './Store/Reducer/UserProfileReducer';
 import searchBarReducer from './Store/Reducer/searchBar';
 import allChatReducer from './Store/Reducer/AllChat';
+import chatboxReducer from './Store/Reducer/chatbox';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
     allChat: allChatReducer,
     userProfile: UserProfileReducer,
-    search: searchBarReducer
+    search: searchBarReducer,
+    chatbox: chatboxReducer
 });
 
 const store = createStore(rootReducer,composeEnhancers(applyMiddleware(thunk)));

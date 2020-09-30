@@ -4,11 +4,14 @@
     padding: 4px 8px;
     cursor: pointer;
     border-radius: 4px;
+    text-decoration: none;
 }
 
-.active{
+.active,
+.person:hover{
     background-color: #ccc;
 }
+
 
 .person img{
     width: 60px;
