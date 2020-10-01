@@ -5,7 +5,7 @@ import App from './Container/App';
 import registerServiceWorker from './registerServiceWorker';
 import {compose,combineReducers,createStore,applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
-import {BrowserRouter} from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom'; 
 import {Provider} from 'react-redux';
 
 
