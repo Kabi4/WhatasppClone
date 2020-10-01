@@ -9,7 +9,7 @@ const Usernav = (props) =>{
         <img className={classes.image} onClick={props.clickProfile} src={ProfilePhoto} alt="Profile"/>
         <p>{props.name}</p>
         <div className={classes.icons}>
-            <div>STATUS</div>
+            <div onClick={props.clickStatus}>STATUS</div>
             <div>NEW CHAT</div>
         </div>
     </div>];

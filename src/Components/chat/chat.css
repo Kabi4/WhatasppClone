@@ -86,6 +86,10 @@
     transform: translateY(-50%);
 }
 
+.send::selection{
+    cursor: none;
+}
+
 .send:hover,.send:focus{
     color: darkgreen;
     z-index: 100;

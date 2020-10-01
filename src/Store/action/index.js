@@ -13,3 +13,8 @@ export {
 export {
     changeChatBox
 } from './chatbox';
+
+export {
+    changeInputHandler,
+    sendMessageInputHandler
+} from './SendMessage';

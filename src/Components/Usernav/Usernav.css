@@ -27,6 +27,10 @@
     color: darkgreen;
 }
 
+.icons div::selection{
+    cursor: none;
+}
+
 .userDetials p{
     cursor: no-drop;
     align-self: center;

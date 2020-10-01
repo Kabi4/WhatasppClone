@@ -6,6 +6,8 @@ import Sidesearch from '../../Components/SideSearch/Sidesearch';
 import Backdrop from './../../Components/Backdrop/Backdrop';
 import classes from './Chatbox.css';
 
+import Photo from './../../Assets/Person.jpg'
+
 import {connect} from 'react-redux';
 
 class Chatbox extends Component{
@@ -33,11 +35,11 @@ class Chatbox extends Component{
         let chattingarea = <div key="chattingarea" className={classes.chatbox}></div>;
         if(this.props.name!==""){
             chattingarea = <div key="chattingarea" className={classes.chatbox}>
-            <ContactDetail clickpic={this.tooglesideInfo} clicksearch={this.tooglesideSearch} name={this.props.name} lastseen={this.props.lastseen}/>
+            <ContactDetail photo={Photo} clickpic={this.tooglesideInfo} clicksearch={this.tooglesideSearch} name={this.props.name} lastseen={this.props.lastseen}/>
             <Chat chats={this.props.chats} />
             <Backdrop show={this.state.sideinfo||this.state.sidesearch} toogleEditing={this.setFalse}/>
-            <Sideinfo name={this.props.name} about={this.props.about} number={this.props.number}  selected={this.state.sideinfo}/>
-            <Sidesearch  selected={this.state.sidesearch} />
+            <Sideinfo photo={Photo} name={this.props.name} about={this.props.about} number={this.props.number}  selected={this.state.sideinfo}/>
+            <Sidesearch  selected={this.state.sidesearch}  name={this.props.name}/>
         </div>
         }
         return(

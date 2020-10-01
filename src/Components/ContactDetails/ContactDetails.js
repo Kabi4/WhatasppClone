@@ -2,12 +2,10 @@ import React from 'react';
 
 import classes from './ContactDetails.css';
 
-import photo from './../../Assets/Person.jpg';
-
 const ContactDetail = (props) => {
     return(
         <div className={classes.contactdetails}>
-            <img onClick={props.clickpic} alt="Profile" src={photo}/>
+            <img onClick={props.clickpic} alt="Profile" src={props.photo}/>
             <div className={classes.about}>
                 <p className={classes.name}>{props.name}</p>
                 <p className={classes.lastseen}>{props.lastseen?props.lastseen:null}</p>
