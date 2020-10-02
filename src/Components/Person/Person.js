@@ -10,7 +10,7 @@ import {connect} from 'react-redux';
 const Person = (props) => {
     let classPerson = [classes.person];
     return(
-        <div className={classPerson.join(" ")} onClick={()=>{props.changeChatHandler(props.name,props.lastseen,props.about,props.number,props.chat)}}>
+        <div className={classPerson.join(" ")} ref={(e)=>{ this[props.name] = e}} onClick={()=>{this[props.name].classList.add(classes.active); props.changeChatHandler(props.name,props.lastseen,props.about,props.number,props.chat,this[props.name],classes.active)}}>
             <img src={profile} alt="chatImage" />
             <div className={classes.data}>
                 <h2 className={classes.name}>{props.name}</h2>
@@ -24,7 +24,7 @@ const Person = (props) => {
 
 const mapDispatchToprops = (dispatch)=>{
     return{
-        changeChatHandler: (name,lastseen,about,number,chat)=>{dispatch(actionCreators.changeChatBox(name,lastseen,about,number,chat))}
+        changeChatHandler: (name,lastseen,about,number,chat,ele,activeClasses)=>{dispatch(actionCreators.changeChatBox(name,lastseen,about,number,chat,ele,activeClasses))}
     }
 }
 

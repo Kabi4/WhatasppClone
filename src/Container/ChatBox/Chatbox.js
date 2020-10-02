@@ -16,7 +16,11 @@ class Chatbox extends Component{
         sidesearch: false
     };
 
-    componentDidMount(){
+    UNSAFE_componentWillUpdate(){
+        if(this.props.element){
+            this.props.element.classList.remove(this.props.activeClasses);
+        }
+
     }
 
     tooglesideInfo = () =>{
@@ -54,7 +58,9 @@ const mapStateToProps = (state)=>{
         number: state.chatbox.number,
         lastseen: state.chatbox.lastseen,
         about: state.chatbox.about,
-        chats: state.chatbox.chat
+        chats: state.chatbox.chat,
+        element: state.chatbox.element,
+        activeClasses: state.chatbox.activeClasses
     }
 }
 

@@ -3,6 +3,7 @@
     height: 100%;
     position: relative;
     padding: 16px 8px;
+    z-index: 200;
     overflow: hidden;
 }
 

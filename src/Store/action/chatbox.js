@@ -1,6 +1,6 @@
 import * as actionTypes from './../actionTypes';
 
-export const changeChatBox=(name,lastseen,about,number,chat)=>{
+export const changeChatBox=(name,lastseen,about,number,chat,element,activeClasses)=>{
     return{
         type: actionTypes.CHANGECHATBOXONHANDLER,
         payload:{
@@ -8,7 +8,9 @@ export const changeChatBox=(name,lastseen,about,number,chat)=>{
             lastseen,
             about,
             number,
-            chat
+            chat,
+            element,
+            activeClasses
         }
     };
 };

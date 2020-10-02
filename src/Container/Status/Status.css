@@ -1,18 +1,44 @@
 .status{
-    width: 100%;
     height: 100%;
+    width: 352%;
     z-index: 200;
     background-color: black;
     left: 0;
     color: white;
     position: relative;
+    padding: 1rem 2rem;
+    overflow-y: scroll;
+    overflow-x: visible;
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    grid-gap: 1rem;
 }
 
 .viewPort{
-    position: absolute;
-    left: 102%;
     top: 0;
-    width: 283%;
+    width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.7);
+}
+
+.status h3{
+    border-bottom: 2px lightslategray solid;
+    margin: 0 2rem;
+    margin-bottom: 1rem;
+}
+
+.status h1{
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    cursor: pointer;
+    color: lightgreen;
+}
+
+.status h1::selection{
+    cursor: none;
+}
+
+.status h1:hover{
+    color: red;
 }

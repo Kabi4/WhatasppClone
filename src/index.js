@@ -1,11 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom'; 
-import './index.css'; 
+import ReactDOM from 'react-dom';
+import './index.css';
 import App from './Container/App';
 import registerServiceWorker from './registerServiceWorker';
-import {compose,combineReducers,createStore,applyMiddleware} from 'redux'; 
+import {compose,combineReducers,createStore,applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
-import {BrowserRouter} from 'react-router-dom'; 
+import {BrowserRouter} from 'react-router-dom';
 import {Provider} from 'react-redux';
 
 
@@ -17,7 +17,7 @@ import sendMessageReducer from './Store/Reducer/SendMessage';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const rootReducer = combineReducers({ 
+const rootReducer = combineReducers({
     allChat: allChatReducer,
     userProfile: UserProfileReducer,
     search: searchBarReducer,

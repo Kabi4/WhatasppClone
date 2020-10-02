@@ -6,6 +6,8 @@ const initialState = {
     number: "",
     lastseen: "",
     chat: [],
+    element: null,
+    activeClasses:""
 };
 
 const chatboxReducer = (state = initialState,action)=>{
@@ -17,7 +19,9 @@ const chatboxReducer = (state = initialState,action)=>{
                 about:action.payload.about,
                 number:action.payload.number,
                 lastseen:action.payload.lastseen,
-                chat:action.payload.chat
+                chat:action.payload.chat,
+                element: action.payload.element,
+                activeClasses: action.payload.activeClasses
             }
         default:
             return state;

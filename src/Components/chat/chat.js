@@ -10,6 +10,7 @@ class chat extends Component{
         super();
         this.wholeChat = React.createRef();
     }
+
     componentDidUpdate(prevprops){
         if(prevprops.chats.length!==this.props.chats.length){
             this.wholeChat.current.scrollTop = this.wholeChat.current.scrollHeight - this.wholeChat.current.clientHeight;

@@ -31,7 +31,7 @@ class SideBar extends Component{
             sidebar = (<div style={{padding: "0"}} className={classes.sidebar} key="sidebar"><Backdrop toogleEditing={this.toggleShowProfile} show={true}/> <UserProfile/></div>);
         }
         if(this.state.showStatus){
-            sidebar = (<div style={{padding: "0"}} className={classes.sidebar} key="sidebar"><Backdrop toogleEditing={this.toggleshowStatus} show={true}/> <Status/> </div>);
+            sidebar = (<div style={{padding: "0"}} className={classes.sidebar} key="sidebar"><Backdrop toogleEditing={this.toggleshowStatus} show={true}/> <Status toogleStatus={this.toggleshowStatus}/> </div>);
         }
         return(
             [sidebar]
