@@ -2,16 +2,27 @@ import React from 'react';
 
 import classes from './StatusView.css';
 
+import { connect } from 'react-redux';
+
 const StatusView = (props) =>{
     let view = <div className={classes.viewport} key="StatusView"><p>Click To View Status</p></div>
-    if(props.imgArr){
+    if(props.src!==""){
         view = <div className={classes.viewport} key="StatusView">
-            <span style={{animation:  "moveLeft "+ props.imgArr?props.imgArr.length*2:2 + "s linear forwards"}}></span>
-        <img src={props.src} alt="status"/></div>;
+                    <span></span>
+                    <img src={props.src} alt="status"/>
+                    <h2>Posted {props.time}</h2>
+                </div>;
     }
     return(
         [view]
     );
 };
 
-export default StatusView;
+const mapStateToProps = (state)=>{
+    return{
+        src: state.status.src,
+        time: state.status.lastTime
+    }
+}
+
+export default connect(mapStateToProps,null)(StatusView);

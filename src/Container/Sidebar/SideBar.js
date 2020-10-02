@@ -9,6 +9,7 @@ import {connect} from 'react-redux';
 
 import classes from './SideBar.css';
 import Status from '../Status/Status';
+import * as actionCreators from './../../Store/action/index';
 
 class SideBar extends Component{
     state={
@@ -19,7 +20,8 @@ class SideBar extends Component{
         this.setState({showProfileDetails: !this.state.showProfileDetails})
     }
     toggleshowStatus=()=>{
-        this.setState({showStatus: !this.state.showStatus})
+        this.setState({showStatus: !this.state.showStatus});
+        this.props.cancelViewStatus();
     }
     render(){
         let sidebar = (<div className={classes.sidebar} key="sidebar">
@@ -45,4 +47,10 @@ const mapStateToProps = (state)=>{
     }
 }
 
-export default connect(mapStateToProps,null)(SideBar);
+const mapDispatchToProps = (dispatch)=>{
+    return{
+        cancelViewStatus: ()=>{dispatch(actionCreators.exitStatusView())}
+    }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(SideBar);

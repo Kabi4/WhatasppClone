@@ -18,3 +18,9 @@ export {
     changeInputHandler,
     sendMessageInputHandler
 } from './SendMessage';
+
+export {
+    statusClickHandler,
+    exitStatusView,
+    nextStatusView
+} from './statusViewBar';
