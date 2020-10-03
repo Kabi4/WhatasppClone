@@ -1,21 +1,37 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import classes from './StatusView.css';
 
+import Aux from './../../HOC Components/Auxillary';
+
 import { connect } from 'react-redux';
 
-const StatusView = (props) =>{
-    let view = <div className={classes.viewport} key="StatusView"><p>Click To View Status</p></div>
-    if(props.src!==""){
-        view = <div className={classes.viewport} key="StatusView">
-                    <span></span>
-                    <img src={props.src} alt="status"/>
-                    <h2>Posted {props.time}</h2>
-                </div>;
+class StatusView extends Component{
+    constructor(props){
+        super();
+        this.imgComp = React.createRef();
     }
-    return(
-        [view]
-    );
+
+    shouldComponentUpdate(props){
+        return this.props.src!==props.src;
+    }
+    componentDidUpdate(){
+                if(this.imgComp.current.classList!==0){this.imgComp.current.classList.remove(classes.myspan);}
+        if(this.imgComp.current && this.props.src!==""){setTimeout(()=>{this.imgComp.current.classList.add(classes.myspan)},0)}
+    }
+    render(){
+        let view = <p>Click To View Status</p>
+        if(this.props.src!==""){
+            view =<Aux><img src={this.props.src} alt="status"/>
+            <h2>Posted {this.props.time}</h2></Aux>
+        }
+        return(
+            <div className={classes.viewport} key="StatusView">
+                    <span ref={this.imgComp}></span>
+                    {view}
+            </div>
+        );
+    }
 };
 
 const mapStateToProps = (state)=>{

@@ -14,9 +14,10 @@ const statusViewStarted = (imgArr,lastViewedStatus)=>{
 
 export const statusClickHandler = (imgArr,lastViewedStatus)=>{
     return dispatch=>{
+        clearTimeout(timeOuts);
         dispatch(statusViewStarted(imgArr,lastViewedStatus));
         timeOuts = setTimeout(()=>{
-            dispatch(nextStatusOrExit(imgArr.length,lastViewedStatus===imgArr.length-1?0:lastViewedStatus+1));
+            dispatch(nextStatusOrExit(imgArr.length,lastViewedStatus===(imgArr.length-1)?0:lastViewedStatus+1));
         },2000)
     }
 }

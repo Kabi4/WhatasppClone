@@ -23,7 +23,7 @@
     cursor: none;
 }
 
-.viewport span{
+.myspan{
     top: 0;
     left: -100%;
     height: 4px;
